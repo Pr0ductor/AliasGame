@@ -1,4 +1,4 @@
-﻿namespace AliasClient
+namespace AliasClient
 {
     partial class LoginForm
     {
@@ -15,64 +15,71 @@
 
         private void InitializeComponent()
         {
-            LabelTitle = new Label();
-            NicknameTextBox = new TextBox();
-            LoginButton = new Button();
-            LabelNickname = new Label();
-            SuspendLayout();
-            // 
+            LabelTitle = new System.Windows.Forms.Label();
+            NicknameTextBox = new System.Windows.Forms.TextBox();
+            LoginButton = new System.Windows.Forms.Button();
+            LabelNickname = new System.Windows.Forms.Label();
+
+            // General form settings
+            this.BackColor = System.Drawing.Color.FromArgb(30, 30, 30); // Dark background
+            this.ForeColor = System.Drawing.Color.White; // Light text
+            this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(300, 250);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "LoginForm";
+            this.Text = "Login";
+
             // LabelTitle
-            // 
             LabelTitle.AutoSize = true;
-            LabelTitle.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            LabelTitle.Location = new Point(75, 20);
+            LabelTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            LabelTitle.Location = new System.Drawing.Point(30, 20);
             LabelTitle.Name = "LabelTitle";
-            LabelTitle.Size = new Size(124, 31);
+            LabelTitle.Size = new System.Drawing.Size(240, 37);
             LabelTitle.TabIndex = 0;
             LabelTitle.Text = "Alias Original";
-            // 
+            LabelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+
             // NicknameTextBox
-            // 
-            NicknameTextBox.Location = new Point(12, 116);
-            NicknameTextBox.Margin = new Padding(3, 4, 3, 4);
+            NicknameTextBox.Location = new System.Drawing.Point(30, 90);
             NicknameTextBox.Name = "NicknameTextBox";
-            NicknameTextBox.Size = new Size(260, 27);
+            NicknameTextBox.Size = new System.Drawing.Size(240, 30);
+            NicknameTextBox.BackColor = System.Drawing.Color.FromArgb(60, 60, 60);
+            NicknameTextBox.ForeColor = System.Drawing.Color.White;
+            NicknameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             NicknameTextBox.TabIndex = 1;
-            // 
-            // LoginButton
-            // 
-            LoginButton.Location = new Point(95, 169);
-            LoginButton.Margin = new Padding(3, 4, 3, 4);
-            LoginButton.Name = "LoginButton";
-            LoginButton.Size = new Size(90, 38);
-            LoginButton.TabIndex = 3;
-            LoginButton.Text = "Login";
-            LoginButton.UseVisualStyleBackColor = true;
-            LoginButton.Click += LoginButton_Click;
-            // 
+
             // LabelNickname
-            // 
             LabelNickname.AutoSize = true;
-            LabelNickname.Location = new Point(12, 91);
+            LabelNickname.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            LabelNickname.Location = new System.Drawing.Point(30, 65);
             LabelNickname.Name = "LabelNickname";
-            LabelNickname.Size = new Size(78, 20);
+            LabelNickname.Size = new System.Drawing.Size(84, 23);
             LabelNickname.TabIndex = 4;
             LabelNickname.Text = "Nickname:";
-            // 
-            // LoginForm
-            // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(284, 250);
-            Controls.Add(LabelNickname);
-            Controls.Add(LoginButton);
-            Controls.Add(NicknameTextBox);
-            Controls.Add(LabelTitle);
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "LoginForm";
-            Text = "Login";
-            ResumeLayout(false);
-            PerformLayout();
+
+            // LoginButton
+            LoginButton.Location = new System.Drawing.Point(90, 140);
+            LoginButton.Name = "LoginButton";
+            LoginButton.Size = new System.Drawing.Size(120, 40);
+            LoginButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            LoginButton.BackColor = System.Drawing.Color.FromArgb(76, 175, 80); // Dark green
+            LoginButton.ForeColor = System.Drawing.Color.White;
+            LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            LoginButton.FlatAppearance.BorderSize = 0; // Remove border
+            LoginButton.TabIndex = 3;
+            LoginButton.Text = "Login";
+            LoginButton.UseVisualStyleBackColor = false;
+            LoginButton.Click += LoginButton_Click;
+
+            // Add controls to the form
+            this.Controls.Add(LabelTitle);
+            this.Controls.Add(NicknameTextBox);
+            this.Controls.Add(LabelNickname);
+            this.Controls.Add(LoginButton);
+
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
 
         private System.Windows.Forms.Label LabelTitle;
