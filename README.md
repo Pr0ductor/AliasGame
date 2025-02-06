@@ -19,7 +19,8 @@
 
 ## :hammer: Установка :hammer:
 1) Клонирование репозитория
-   - клонируйте репозиторий себе на компьютер через команду git clone https://github.com/Pr0ductor/AliasGame.git
+   - клонируйте репозиторий себе на компьютер через команду:
+   - git clone https://github.com/Pr0ductor/AliasGame.git
 2) Запуск сервера
    - открыть проект в Visual Studio или Rider, настроить конфигурацию запуска и запустить Server
 3) Запуск клиентов для игры
