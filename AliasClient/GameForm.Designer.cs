@@ -111,9 +111,9 @@ namespace AliasClient
             this.GuessButton.Name = "GuessButton";
             this.GuessButton.Size = new System.Drawing.Size(150, 40);
             this.GuessButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.GuessButton.BackColor = System.Drawing.Color.FromArgb(76, 175, 80); // Dark green
+            this.GuessButton.BackColor = System.Drawing.Color.FromArgb(139, 195, 74); 
             this.GuessButton.ForeColor = System.Drawing.Color.White;
-            this.GuessButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat; // Flat style
+            this.GuessButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat; 
             this.GuessButton.FlatAppearance.BorderSize = 0; // Remove border
             this.GuessButton.TabIndex = 6;
             this.GuessButton.Text = "Guess";
@@ -125,9 +125,9 @@ namespace AliasClient
             this.SkipButton.Name = "SkipButton";
             this.SkipButton.Size = new System.Drawing.Size(150, 40);
             this.SkipButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.SkipButton.BackColor = System.Drawing.Color.FromArgb(158, 158, 158); // Gray
+            this.SkipButton.BackColor = System.Drawing.Color.White;
             this.SkipButton.ForeColor = System.Drawing.Color.Black;
-            this.SkipButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat; // Flat style
+            this.SkipButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat; 
             this.SkipButton.FlatAppearance.BorderSize = 0; // Remove border
             this.SkipButton.TabIndex = 7;
             this.SkipButton.Text = "Skip";
