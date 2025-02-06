@@ -20,8 +20,6 @@ namespace AliasClient
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
@@ -46,6 +44,12 @@ namespace AliasClient
             this.BackColor = System.Drawing.Color.FromArgb(30, 30, 30); // Dark background
             this.ForeColor = System.Drawing.Color.White; // Light text
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "GameForm";
+            this.Text = "Alias Game";
+            this.Size = new System.Drawing.Size(800, 620); // Начальный размер
+            this.MinimumSize = new System.Drawing.Size(600, 620); // Минимальный размер
+            this.Resize += new System.EventHandler(this.GameForm_Resize);
 
             // CurrentTeamLabel
             this.CurrentTeamLabel.AutoSize = true;
@@ -167,8 +171,8 @@ namespace AliasClient
             // Send Chat Message Button
             this.SendMessageButton.Location = new System.Drawing.Point(630, 540);
             this.SendMessageButton.Name = "SendMessageButton";
-            this.SendMessageButton.Size = new System.Drawing.Size(150, 30);
-            this.SendMessageButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.SendMessageButton.Size = new System.Drawing.Size(135, 25);
+            this.SendMessageButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.SendMessageButton.BackColor = System.Drawing.Color.FromArgb(0, 122, 204); // Blue accent
             this.SendMessageButton.ForeColor = System.Drawing.Color.White;
             this.SendMessageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -197,7 +201,14 @@ namespace AliasClient
             this.PerformLayout();
         }
 
-        #endregion
+        private void GameForm_Resize(object sender, System.EventArgs e)
+        {
+            // Перерасчет размеров элементов при изменении размера формы
+            this.WordLabel.Size = new System.Drawing.Size(this.ClientSize.Width - 40, 50);
+            this.ChatTextBox.Size = new System.Drawing.Size(this.ClientSize.Width - 40, 200);
+            this.ChatInputTextBox.Size = new System.Drawing.Size(this.ClientSize.Width - 180, 30);
+            this.SendMessageButton.Location = new System.Drawing.Point(this.ClientSize.Width - 155, 540);
+        }
 
         private System.Windows.Forms.Label CurrentTeamLabel;
         private System.Windows.Forms.Label WordLabel;
